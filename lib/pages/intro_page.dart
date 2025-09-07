@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn/pages/home_page.dart';
+import 'package:learn/themes/colors.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -7,7 +8,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF87352F), // deep warm red
+      backgroundColor: primaryColor, // deep warm red
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
@@ -74,7 +75,7 @@ class IntroPage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => HomePage(),
                         ),
                       );
                     },
